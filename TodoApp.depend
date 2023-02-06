@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1675689214 source:d:\estolbin\code\tren\todoapp\lstview.cpp
+	"LstView.h"
+
+1675688509 d:\estolbin\code\tren\todoapp\lstview.h
+	<windows.h>
+	<commctrl.h>
+	"resource.h"
+
+1675670733 d:\estolbin\code\tren\todoapp\resource.h
+
+1675670147 source:d:\estolbin\code\tren\todoapp\messbox.cpp
+	"MessBox.h"
+
+1675670535 d:\estolbin\code\tren\todoapp\messbox.h
+	<Windows.h>
+
+1675671036 source:d:\estolbin\code\tren\todoapp\dialogbox.cpp
+	<Windows.h>
+	"DialogBox.h"
+	<string>
+
+1675669345 d:\estolbin\code\tren\todoapp\dialogbox.h
+	<Windows.h>
+	<string>
+
+1675692662 source:d:\estolbin\code\tren\todoapp\main.cpp
+	<windows.h>
+	<string>
+	"MainWindow.h"
+
+1675672517 d:\estolbin\code\tren\todoapp\mainwindow.h
+	<Windows.h>
+	<string>
+
+1675692482 source:d:\estolbin\code\tren\todoapp\mainwindow.cpp
+	<Windows.h>
+	<string>
+	<vector>
+	<chrono>
+	"MainWindow.h"
+	"LstView.h"
+	"Tasks.h"
+	"helpers.h"
+
+1675679076 source:d:\estolbin\code\tren\todoapp\tasks.cpp
+	<string>
+	"Tasks.h"
+
+1675678893 d:\estolbin\code\tren\todoapp\tasks.h
+	<string>
+	<ctime>
+
+1675678452 source:d:\estolbin\code\tren\todoapp\helpers.cpp
+	"helpers.h"
+
+1675678452 d:\estolbin\code\tren\todoapp\helpers.h
+	<ctime>
+	<iostream>
+	<iomanip>
+	<string>
+	<chrono>
+
+1675681169 source:d:\estolbin\code\tren\todoapp\stringutil.cpp
+	"StringUtil.h"
+
+1675681321 d:\estolbin\code\tren\todoapp\stringutil.h
+	<string>
+	<iomanip>
+	<iostream>
+
+1675690676 d:\estolbin\code\tren\todoapp\sqlitewrapper.h
+	<string>
+	<vector>
+	"sqlite3.h"
+	"Tasks.h"
+
+1672237599 d:\estolbin\code\tren\todoapp\sqlite3.h
+	<stdarg.h>
+
+1675691381 source:d:\estolbin\code\tren\todoapp\sqlitewrapper.cpp
+	"SQLiteWrapper.h"
+
