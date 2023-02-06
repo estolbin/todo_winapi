@@ -5,7 +5,7 @@
 #include "MainWindow.h"
 #include "LstView.h"
 #include "Tasks.h"
-#include "helpers.h"
+
 
 
 MainWindow::MainWindow(const std::string &windowName, HINSTANCE hInstance,const std::string &className)
@@ -90,14 +90,7 @@ static LRESULT CALLBACK MainWindow::WindowProc(HWND hWnd, UINT uMsg, WPARAM wPar
             listView.AddColumn(TEXT("Deadline"),clientWidth * 0.15);
             listView.AddColumn(TEXT("Created"),clientWidth * 0.15);
             listView.AddColumn(TEXT("Description"), clientWidth * 0.65);
-            //listView.AddColumn(TEXT("Done"), clientWidth * 0.05);
             listView.AddColumn(TEXT("Id"), clientWidth * 0.05);
-
-
-
-//            listView.AddItem(TEXT("Item 1"), 0);
-//            listView.SetItemText(TEXT("Subitem 1"), 0, 0);
-//            listView.SetItemText(TEXT("Subitem 2"), 0, 1);
 
             time_t now = time(0);
             Tasks task1(1, "Test 1", &now, &now);
