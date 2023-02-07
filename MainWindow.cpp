@@ -5,8 +5,14 @@
 #include "MainWindow.h"
 #include "LstView.h"
 #include "Tasks.h"
+#include "SQLiteWrapper.h"
+#include "DialogBox.h"
 
 
+struct DlgData
+{
+    int id;
+};
 
 MainWindow::MainWindow(const std::string &windowName, HINSTANCE hInstance,const std::string &className)
 {
@@ -47,7 +53,9 @@ static LRESULT CALLBACK MainWindow::WindowProc(HWND hWnd, UINT uMsg, WPARAM wPar
             {
                 if (pnmh->idFrom == IDC_LISTVIEW)
                 {
-                    MessageBox(hWnd, "List view double clicked!", "Test", MB_OK);
+                    DialogBoxWrapper dialog;
+                    dialog.Create(hWnd, MAKEINTRESOURCE(IDD_MYDIALOG), DialogBoxWrapper::DialogProc);
+
                 }
             }
             break;
@@ -92,28 +100,25 @@ static LRESULT CALLBACK MainWindow::WindowProc(HWND hWnd, UINT uMsg, WPARAM wPar
             listView.AddColumn(TEXT("Description"), clientWidth * 0.65);
             listView.AddColumn(TEXT("Id"), clientWidth * 0.05);
 
-            time_t now = time(0);
-            Tasks task1(1, "Test 1", &now, &now);
-            Tasks task2(2, "Test 2", &now, &now);
-            Tasks task3(3, "Another test how it work", &now, &now);
-            std::vector<Tasks> taskList;
+            SQLiteWrapper db("todo.db");
+            std::vector<Tasks> taskList = db.query("SELECT * FROM tasks");
 
-            task2.setIsDone();
-
-            taskList.push_back(task1);
-            taskList.push_back(task2);
-            taskList.push_back(task3);
-
-            for(int i = 0; i< taskList.size(); i++)
+            try {
+                for(int i = 0; i< taskList.size(); i++)
+                {
+                    listView.AddItem(TEXT("Item 1"),i);
+                    listView.SetItemText((std::to_string(taskList[i].getId())).c_str(), i, 0);
+                    listView.SetCheckState(i, 1, taskList[i].getIsDone());
+                    listView.SetItemText(taskList[i].getDescription().c_str(), i, 1);
+                    //char createdText[30];
+                    //ctime_s(createdText,sizeof(createdText),taskList[i].getCreated());
+                    listView.SetItemText(ctime(taskList[i].getCreated()), i, 2);
+                    listView.SetItemText("", i, 3);
+                }
+            }
+            catch(const char* msg)
             {
-                listView.AddItem(TEXT("Item 1"),i);
-                listView.SetItemText((std::to_string(taskList[i].getId())).c_str(), i, 0);
-                listView.SetCheckState(i, 1, taskList[i].getIsDone());
-                listView.SetItemText(taskList[i].getDescription().c_str(), i, 1);
-                char createdText[26];
-                ctime_s(createdText,26,taskList[i].getCreated());
-                listView.SetItemText(createdText, i, 2);
-                listView.SetItemText("", i, 3);
+                MessageBox(NULL, msg, "Error", MB_OK);
             }
 
         }

@@ -59,11 +59,5 @@ static LRESULT CALLBACK ListViewWrapper::LVWndProc(HWND hwnd, UINT msg, WPARAM w
 void ListViewWrapper::SetCheckState(int itemIndex, int subItemIndex, bool isChecked)
 {
     ListView_SetCheckState(hWnd, itemIndex,isChecked);
-//    LVITEM lvItem;
-//    lvItem.mask = LVIF_STATE;
-//    lvItem.stateMask = LVIS_STATEIMAGEMASK;
-//    lvItem.iItem = itemIndex;
-//    lvItem.iSubItem = subItemIndex;
-//    lvItem.state = INDEXTOSTATEIMAGEMASK(isChecked ? 2 : 1);
-//    ListView_SetItem(hWnd, &lvItem);
+
 }

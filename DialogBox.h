@@ -1,12 +1,14 @@
 #include <Windows.h>
 #include <string>
 
+#pragma once
+
 class DialogBoxWrapper
 {
 private:
     HWND m_hWnd;
     WNDPROC m_pOldWndProc;
-    static DialogBoxWrapper* m_pThis;
+    static DialogBoxWrapper* m_dlgThis;
 
 public:
     DialogBoxWrapper();
@@ -23,4 +25,4 @@ public:
 
 };
 
-DialogBoxWrapper* DialogBoxWrapper::m_pThis = NULL;
+

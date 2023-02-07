@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1675689214 source:d:\estolbin\code\tren\todoapp\lstview.cpp
+1675775461 source:d:\estolbin\code\tren\todoapp\lstview.cpp
 	"LstView.h"
 
 1675688509 d:\estolbin\code\tren\todoapp\lstview.h
@@ -7,7 +7,7 @@
 	<commctrl.h>
 	"resource.h"
 
-1675670733 d:\estolbin\code\tren\todoapp\resource.h
+1675775461 d:\estolbin\code\tren\todoapp\resource.h
 
 1675670147 source:d:\estolbin\code\tren\todoapp\messbox.cpp
 	"MessBox.h"
@@ -15,25 +15,26 @@
 1675670535 d:\estolbin\code\tren\todoapp\messbox.h
 	<Windows.h>
 
-1675671036 source:d:\estolbin\code\tren\todoapp\dialogbox.cpp
+1675775547 source:d:\estolbin\code\tren\todoapp\dialogbox.cpp
 	<Windows.h>
 	"DialogBox.h"
 	<string>
 
-1675669345 d:\estolbin\code\tren\todoapp\dialogbox.h
+1675774582 d:\estolbin\code\tren\todoapp\dialogbox.h
 	<Windows.h>
 	<string>
 
-1675692662 source:d:\estolbin\code\tren\todoapp\main.cpp
+1675770328 source:d:\estolbin\code\tren\todoapp\main.cpp
 	<windows.h>
 	<string>
 	"MainWindow.h"
+	"SQLiteWrapper.h"
 
 1675672517 d:\estolbin\code\tren\todoapp\mainwindow.h
 	<Windows.h>
 	<string>
 
-1675693627 source:d:\estolbin\code\tren\todoapp\mainwindow.cpp
+1675775152 source:d:\estolbin\code\tren\todoapp\mainwindow.cpp
 	<Windows.h>
 	<string>
 	<vector>
@@ -41,12 +42,14 @@
 	"MainWindow.h"
 	"LstView.h"
 	"Tasks.h"
+	"SQLiteWrapper.h"
+	"DialogBox.h"
 
-1675679076 source:d:\estolbin\code\tren\todoapp\tasks.cpp
+1675772514 source:d:\estolbin\code\tren\todoapp\tasks.cpp
 	<string>
 	"Tasks.h"
 
-1675678893 d:\estolbin\code\tren\todoapp\tasks.h
+1675772474 d:\estolbin\code\tren\todoapp\tasks.h
 	<string>
 	<ctime>
 
@@ -68,7 +71,7 @@
 	<iomanip>
 	<iostream>
 
-1675690676 d:\estolbin\code\tren\todoapp\sqlitewrapper.h
+1675771869 d:\estolbin\code\tren\todoapp\sqlitewrapper.h
 	<string>
 	<vector>
 	"sqlite3.h"
@@ -77,8 +80,13 @@
 1662377338 d:\estolbin\code\tren\todoapp\sqlite3.h
 	<stdarg.h>
 
-1675691381 source:d:\estolbin\code\tren\todoapp\sqlitewrapper.cpp
+1675772440 source:d:\estolbin\code\tren\todoapp\sqlitewrapper.cpp
 	"SQLiteWrapper.h"
+	<windows.h>
+	<ctime>
+	<string>
+	<iostream>
+	<time.h>
 
 1662377338 source:d:\estolbin\code\tren\todoapp\shell.c
 	<stdlib.h>
@@ -222,4 +230,12 @@
 	<unicode/ubrk.h>
 	<unicode/utf16.h>
 	<math.h>
+
+1675773734 source:d:\estolbin\code\tren\todoapp\taskeditdialog.cpp
+	<windows.h>
+	"resource.h"
+
+1675774898 source:d:\estolbin\code\tren\todoapp\resource.rc
+	<windows.h>
+	"resource.h"
 

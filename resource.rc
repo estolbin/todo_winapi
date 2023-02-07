@@ -1,0 +1,13 @@
+#include <windows.h>
+#include "resource.h"
+
+
+IDD_MYDIALOG DIALOGEX 0, 0, 200, 100
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog Box"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "This is a sample dialog box.",IDC_STATIC,10,10,180,20
+    PUSHBUTTON      "OK",IDOK,100,70,50,20
+    PUSHBUTTON      "Cancel",IDCANCEL,150,70,50,20
+END
